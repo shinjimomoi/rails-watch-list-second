@@ -1,0 +1,7 @@
+<div class="d-flex justify-content-center align-items-center">
+  <%= simple_form_for @list do |f| %>
+      <%= f.input :name, label: false, input_html: { placeholder: "List name", class: "input mt-3 mb-3" } %>
+      <%#= f.input :photo, as: :file, label: false, class: 'ms-3' %>
+      <%= f.submit 'Add', class: 'btn btn-primary mt-1'%>
+  <% end %>
+</div>

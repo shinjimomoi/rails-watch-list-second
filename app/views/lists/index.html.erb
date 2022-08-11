@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Index</h1>
+  <h2 class="link"><%= link_to "New List", new_list_path %></h2>
+
+  <% @lists.each do |list| %>
+  <p><%= link_to list.name, list_path(list) %></p>
+  <%= link_to 'X', list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  <% end %>
+</div>

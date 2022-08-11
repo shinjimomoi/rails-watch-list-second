@@ -1,0 +1,7 @@
+<div class="d-flex justify-content-center align-items-center">
+  <%= simple_form_for [ @list, @bookmark ] do |f| %>
+    <%= f.association :movie, prompt: "Select a movie" %>
+    <%= f.input :comment, placeholder: "Comment here" %>
+    <%= f.submit class: 'btn btn-primary mt-2' %>
+  <% end %>
+</div>
