@@ -1,0 +1,40 @@
+.card {
+  width: auto;
+  font-size: 12px;
+  color: #444;
+  margin-right: 8px;
+}
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
+  width: 240px;
+}
+
+.card-category a {
+  color: #fff;
+}
+
+.card-trip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.absolute {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
