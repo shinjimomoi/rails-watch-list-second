@@ -1,8 +1,12 @@
-<div class="d-flex justify-content-center align-items-center">
-  <%= simple_form_for @list do |f| %>
-      <%= f.input :name, label: false, input_html: { placeholder: "List name", class: "input mt-3 mb-3" } %>
-      <%#= f.input :photo, as: :file, label: false, class: 'ms-3' %>
-      <%= f.input :photo, as: :file %>
-      <%= f.submit 'Add', class: 'btn btn-primary mt-1'%>
-  <% end %>
+
+<div class="container text-center mt-5">
+  <h2>Create a new list</h2>
+  <div class="d-flex justify-content-center align-items-center text-center">
+    <%= simple_form_for @list do |f| %>
+        <%= f.input :name, label: false, input_html: { placeholder: "List name", class: "input mt-3 mb-3" } %>
+        <%#= f.input :photo, as: :file, label: false, class: 'ms-3' %>
+        <%= f.input :photo, as: :file %>
+        <%= f.submit 'Add', class: 'btn btn-primary mt-1'%>
+    <% end %>
+  </div>
 </div>

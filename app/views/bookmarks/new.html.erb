@@ -1,7 +1,10 @@
-<div class="d-flex justify-content-center align-items-center">
-  <%= simple_form_for [ @list, @bookmark ] do |f| %>
-    <%= f.association :movie, prompt: "Select a movie" %>
-    <%= f.input :comment, placeholder: "Comment here" %>
-    <%= f.submit class: 'btn btn-primary mt-2' %>
-  <% end %>
+<div class="container text-center mt-5">
+  <h2>Create a new bookmark</h2>
+  <div class="d-flex justify-content-center align-items-center text-center">
+    <%= simple_form_for [ @list, @bookmark ] do |f| %>
+      <%= f.association :movie, prompt: "Select a movie" %>
+      <%= f.input :comment, placeholder: "Comment here" %>
+      <%= f.submit class: 'btn btn-primary mt-2' %>
+    <% end %>
+</div>
 </div>

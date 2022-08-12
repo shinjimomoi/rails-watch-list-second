@@ -1,12 +1,17 @@
+<div class="banner d-flex align-items-center justify-content-center text-center">
+  <div>
+    <h1>Watchlist</h1>
+    <p>Bookmark your favorite movies</p>
+  </div>
+</div>
 <div class="container">
-  <h1>Watchlist</h1>
-  <h2 class="link"><%= link_to "New List", new_list_path %></h2>
-
+  <h2 class="link"><%= link_to "Create a New List", new_list_path %></h2>
   <div class="container d-flex">
   <% @lists.each do |list| %>
     <div class="card-category mb-3 me-3" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('boris_retreat_2017.jpg') %>)">
-    <p class="list-name card-link-trip"><%= link_to "", list_path(list) %></p>
-    <%= link_to 'X', list_path(list), class: "absolute", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      <%= list.name %>
+      <%= link_to '', list_path(list), class: 'card-trip-link' %>
+      <%= link_to 'X', list_path(list), class: "absolute", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
     </div>
   <% end %>
   </div>
